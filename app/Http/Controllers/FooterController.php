@@ -42,14 +42,17 @@ class FooterController extends Controller
         if ($request->isMethod('post')) {
             $data = $request->post();
         }
-       /* dd($data);*/ array_shift($data);
+        /* dd($data);*/
+        array_shift($data);
         $links = $data['row']['link'];
+        $svgs = $data['row']['svg'];
+        $data = array_combine($svgs, $links);
         DB::table('footers')->truncate();//remove all data from table in DB
-        Footer::create(['link' => $links]); //create new row intable
+        foreach ($data as $k => $v) {
+            Footer::create(['link' => $v, 'svg' => $k]); //create new row intable}
+        }
         return redirect('account'); //go to dashboard
     }
-
-
     /**
      * Display the specified resource.
      *
