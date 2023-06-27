@@ -44,12 +44,8 @@ class TitlesetController extends Controller
         }
 
         $titles = $data['title'];
-
-
         DB::table('titlesets')->truncate();//remove all data from table in DB
-
         Titleset::create(['title' => $titles]); //create new row in table
-
         return redirect('account'); //go to dashboard
     }
 

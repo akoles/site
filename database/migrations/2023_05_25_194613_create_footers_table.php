@@ -16,8 +16,7 @@ return new class extends Migration
         Schema::create('footers', function (Blueprint $table)  {
             $table->id();
             $table->timestamps();
-            $table->text('ftitle');
-            $table->text('flink');
+            $table->text('link')->nullable();
             $table->text('svg')->nullable();
         });
     }

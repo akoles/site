@@ -9,8 +9,8 @@ class Footer extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'ftitle',
-        'flink',
+        'title',
+        'link',
         'svg',
     ];
 }

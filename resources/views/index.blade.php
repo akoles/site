@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('content')
     @include('convertor')
     @if (isset($content))

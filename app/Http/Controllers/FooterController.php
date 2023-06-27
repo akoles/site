@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Footer;
+use App\Models\Menuset;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -17,7 +18,7 @@ class FooterController extends Controller
     public function index()
     {
         $val = Footer::all();
-        return view('footerset', ['data' => Footer::all()]);
+        return view('footerset', ['footer' => Footer::all(),]);
     }
 
     /**
@@ -41,15 +42,10 @@ class FooterController extends Controller
         if ($request->isMethod('post')) {
             $data = $request->post();
         }
-        array_shift($data);//remove first element with token info
-//        dd($data);
-        $titles = $data['ftitle'];
-        $links = $data['flink'];
-        $data = array_combine($titles, $links);
+       /* dd($data);*/ array_shift($data);
+        $links = $data['row']['link'];
         DB::table('footers')->truncate();//remove all data from table in DB
-        foreach ($data as $k => $v) {
-            Footer::create(['ftitle' => $k, 'flink' => $v]); //create new row in table
-        }
+        Footer::create(['link' => $links]); //create new row intable
         return redirect('account'); //go to dashboard
     }
 
