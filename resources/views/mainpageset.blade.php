@@ -11,7 +11,7 @@
                         <div class="row align-items-center">
                             <div class="col-md-11">Main page Settings</div>
                             <div class="col-md-1">
-                                <a class="btn btn-primary bg-warning float-end" href="dashboard" role="button">Back</a>
+                                <a class="btn btn-primary bg-warning float-end" href="/account" role="button">Back</a>
                             </div>
                         </div>
                     </div>

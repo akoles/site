@@ -14,7 +14,7 @@
 
                 @foreach( $footer as $f)
                     <li class="nav-item">
-                        <a class="btn btn-primary" role="button" href="<?= $f->link ?>"> <?= $f->svg ?></a>
+                        <a class="btn btn-outline-secondary" role="button" href="<?= $f->link ?>"> <?= $f->svg ?></a>
                     </li>
                 @endforeach
             @endisset
