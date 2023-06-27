@@ -1,10 +1,3 @@
-{{--<ul class="navbar-nav ">--}}
-{{--    <li class="nav-item">--}}
-{{--        <ul class="navbar-nav ">--}}
-
-{{--        </ul>--}}
-{{--    </li>--}}
-{{--</ul>--}}
 
 <ul class="nav">
     <li class="nav-item">

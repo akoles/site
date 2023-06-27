@@ -57,10 +57,10 @@
      </div>
  </div>
 
- @include('footer')
+
 
 @endsection
-
+@include('footer')
 </body>
 </html>
 

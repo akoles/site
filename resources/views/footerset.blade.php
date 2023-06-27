@@ -19,9 +19,6 @@
                                 @if (isset($footer))
                                     @foreach( $footer as $f)
                                         <div class="input-group mb-3">
-{{--                                            <span class="input-group-text">Tiltle:</span>--}}
-{{--                                            <input type="text" name="row[title][]" class="form-control"--}}
-{{--                                                   value="<?=$footer->title?>">--}}
                                             <span class="input-group-text">Link:</span>
                                             <input type="text" name="row[link][]" class="form-control"
                                                    value="<?=$f->link?>">

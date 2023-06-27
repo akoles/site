@@ -40,22 +40,10 @@
                 @endif
             @else
                 <ul class="nav-item ">
-                    <a class="nav-link " href="/account"
-                        {{--role="button"
-                        data-bs-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false" v-pre--}}>
+                    <a class="nav-link " href="/account">
                         {{ Auth::user()->name }}
                     </a>
-                {{--<ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="">Account</a></li>--}}
-                {{--                                                <div class="dropdown-menu dropdown-menu-end"--}}
-                {{--                                                     aria-labelledby="navbarDropdown">--}}
-                {{--                                                <li><a class="nav-item" href="/logout">Log out</a></li>--}}
-                {{--                                                <a class="nav-item-item" href="{{ route('logout') }}"--}}
-                {{--                                                   onclick="event.preventDefault();--}}
-                {{--                                                 document.getElementById('logout-form').submit();">--}}
-                {{--                                                    {{ __('Logout') }}--}}
-                {{--                                                </a>--}}
+
         </div>
 </ul>
 @endguest
